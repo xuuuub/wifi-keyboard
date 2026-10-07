@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#d5d8de">
+<title>手机当键盘</title>
+<link rel="stylesheet" href="static/style.css">
+<script src="static/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <span class="dot" id="dot"></span>
+    <span class="title">手机当键盘</span>
+    <span class="status" id="status">连接中…</span>
+  </header>
+
+  <div class="editor">
+    <textarea id="ta" placeholder="在这里打字，电脑光标处会同步出现…"
+              autocapitalize="off" autocomplete="off" autocorrect="off"
+              spellcheck="false" enterkeyhint="enter"></textarea>
+    <button id="clear" class="float-clear">清空</button>
+  </div>
+
+  <div class="keys" id="keys"></div>
+
+  <footer>
+    <label class="switch">
+      <input type="checkbox" id="realtime" checked>
+      <span>实时同步</span>
+    </label>
+    <span class="spacer"></span>
+    <button id="send" style="display:none">发送</button>
+  </footer>
+</body>
+</html>
